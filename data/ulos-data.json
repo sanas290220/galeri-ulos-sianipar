@@ -1,0 +1,174 @@
+[
+  {
+    "id": 1,
+    "nama": "Ulos Ragidup",
+    "kategori": "Pernikahan",
+    "harga": 1500000,
+    "hargaFormatted": "Rp 1.500.000",
+    "berat": 650,
+    "makna": "Ragidup melambangkan kehidupan dan kelangsungan keturunan. Merupakan ulos paling bernilai tinggi yang diberikan orang tua pengantin wanita (Hula-hula) kepada pengantin pria sebagai simbol doa agar dikaruniai umur panjang dan kebahagiaan.",
+    "penggunaan": "Wajib digunakan pada upacara pernikahan adat Batak (Pamasu-masuon & Ulos Passamot).",
+    "gambar": "assets/images/ragidup.jpg",
+    "varian": [
+      { "warna": "Merah Maroon", "ukuran": "Standard (200x70cm)", "stok": 12 },
+      { "warna": "Hitam Etnik", "ukuran": "Jumbo (230x85cm)", "stok": 5 }
+    ]
+  },
+  {
+    "id": 2,
+    "nama": "Ulos Ragi Hotang",
+    "kategori": "Pernikahan",
+    "harga": 950000,
+    "hargaFormatted": "Rp 950.000",
+    "berat": 500,
+    "makna": "Ragi Hotang (motif rotan) melambangkan ikatan persatuan yang kokoh dan tidak mudah putus sebagaimana sifat rotan yang kuat dan lentur.",
+    "penggunaan": "Diberikan saat mengulosi pengantin (Ulos Helang) agar ikatan pernikahan tetap teguh menghadapi cobaan hidup.",
+    "gambar": "assets/images/ragi-hotang.jpg",
+    "varian": [
+      { "warna": "Cokelat Tua", "ukuran": "Standard (190x65cm)", "stok": 8 },
+      { "warna": "Merah Bata", "ukuran": "Standard (190x65cm)", "stok": 6 }
+    ]
+  },
+  {
+    "id": 3,
+    "nama": "Ulos Pinuncaan",
+    "kategori": "Pernikahan",
+    "harga": 2200000,
+    "hargaFormatted": "Rp 2.200.000",
+    "berat": 800,
+    "makna": "Ulos Pinuncaan terdiri dari lima bagian tenunan terpisah yang disatukan, melambangkan struktur kekerabatan Dalihan Na Tolu yang utuh dan penuh kewibawaan.",
+    "penggunaan": "Dipakai oleh Raja Adat atau orang tua pengantin pada prosesi pernikahan adat skala besar.",
+    "gambar": "assets/images/pinuncaan.jpg",
+    "varian": [
+      { "warna": "Hitam Gold", "ukuran": "Jumbo (240x90cm)", "stok": 3 }
+    ]
+  },
+  {
+    "id": 4,
+    "nama": "Ulos Sadum",
+    "kategori": "Pesta",
+    "harga": 850000,
+    "hargaFormatted": "Rp 850.000",
+    "berat": 450,
+    "makna": "Motif Sadum didominasi warna-warni cerah yang melambangkan keceriaan, kebahagiaan, serta motivasi hidup. Ulos ini simbol rasa bersyukur dan penghormatan.",
+    "penggunaan": "Digunakan sebagai selendang (Pahompu) dalam pesta adat suka cita atau diberikan sebagai cinderamata kehormatan.",
+    "gambar": "assets/images/sadum.jpg",
+    "varian": [
+      { "warna": "Multicolor Cerah", "ukuran": "Standard (180x60cm)", "stok": 15 },
+      { "warna": "Hijau Etnik", "ukuran": "Standard (180x60cm)", "stok": 10 }
+    ]
+  },
+  {
+    "id": 5,
+    "nama": "Ulos Mangiring",
+    "kategori": "Pesta",
+    "harga": 550000,
+    "hargaFormatted": "Rp 550.000",
+    "berat": 400,
+    "makna": "Mangiring melambangkan doa agar anak yang lahir kelak diiringi oleh kelahiran adik-adiknya (keluarga yang harmonis dan banyak anak).",
+    "penggunaan": "Sering diberikan kepada ibu yang baru melahirkan (Ulos Parompa) untuk menggendong bayi atau acara syukuran.",
+    "gambar": "assets/images/mangiring.jpg",
+    "varian": [
+      { "warna": "Merah Tradisional", "ukuran": "Standard (175x55cm)", "stok": 20 }
+    ]
+  },
+  {
+    "id": 6,
+    "nama": "Ulos Bintang Maratur",
+    "kategori": "Pesta",
+    "harga": 700000,
+    "hargaFormatted": "Rp 700.000",
+    "berat": 450,
+    "makna": "Garis-garis teratur pada Ulos Bintang Maratur menggambarkan susunan bintang di langit yang teratur, melambangkan ketertiban, kedisiplinan, dan keberkatan hidup.",
+    "penggunaan": "Dipakai pada syukuran kehamilan (7 bulanan), peresmian rumah baru, dan syukuran penyebaran rezeki.",
+    "gambar": "assets/images/bintang-maratur.jpg",
+    "varian": [
+      { "warna": "Biru Navy", "ukuran": "Standard (180x60cm)", "stok": 10 }
+    ]
+  },
+  {
+    "id": 7,
+    "nama": "Ulos Bolean",
+    "kategori": "Duka Cita",
+    "harga": 600000,
+    "hargaFormatted": "Rp 600.000",
+    "berat": 500,
+    "makna": "Ulos Bolean memiliki corak warna gelap dan tenang, melambangkan empati, rasa berkabung, serta penghormatan terakhir.",
+    "penggunaan": "Khusus dipakai sebagai kain selendang atau penutup saat menghadiri upacara kematian adat Batak.",
+    "gambar": "assets/images/bolean.jpg",
+    "varian": [
+      { "warna": "Hitam Kelam", "ukuran": "Standard (180x65cm)", "stok": 7 }
+    ]
+  },
+  {
+    "id": 8,
+    "nama": "Ulos Sibolang",
+    "kategori": "Duka Cita",
+    "harga": 750000,
+    "hargaFormatted": "Rp 750.000",
+    "berat": 550,
+    "makna": "Sibolang melambangkan ketabahan dan rasa duka mendalam. Warna dominan biru tua atau hitam menyimbolkan penghormatan kepada keluarga yang ditinggalkan.",
+    "penggunaan": "Digunakan oleh keluarga dekat dalam upacara duka cita (Monding) dan penguburan adat.",
+    "gambar": "assets/images/sibolang.jpg",
+    "varian": [
+      { "warna": "Biru Gelap", "ukuran": "Standard (190x70cm)", "stok": 9 }
+    ]
+  },
+  {
+    "id": 9,
+    "nama": "Ulos Tutur-Tutur",
+    "kategori": "Duka Cita",
+    "harga": 500000,
+    "hargaFormatted": "Rp 500.000",
+    "berat": 400,
+    "makna": "Tutur-tutur menyimbolkan rasa belasungkawa dari kerabat dekat untuk menguatkan hati keluarga yang sedang berduka.",
+    "penggunaan": "Diberikan oleh pihak kerabat sebagai tanda duka cita dan doa penghiburan.",
+    "gambar": "assets/images/tutur-tutur.jpg",
+    "varian": [
+      { "warna": "Abu-abu Gelap", "ukuran": "Standard (170x60cm)", "stok": 6 }
+    ]
+  },
+  {
+    "id": 10,
+    "nama": "Ulos Suri-Suri",
+    "kategori": "Casual",
+    "harga": 450000,
+    "hargaFormatted": "Rp 450.000",
+    "berat": 350,
+    "makna": "Motif sisir (Suri) melambangkan kerapian, kesederhanaan, dan keindahan sehari-hari.",
+    "penggunaan": "Sangat cocok sebagai busana casual, selendang gaun, souvenir budaya, atau penutup bahu sehari-hari.",
+    "gambar": "assets/images/suri-suri.jpg",
+    "varian": [
+      { "warna": "Maroon Muda", "ukuran": "Ringkas (160x50cm)", "stok": 25 }
+    ]
+  },
+  {
+    "id": 11,
+    "nama": "Ulos Tumtuman",
+    "kategori": "Casual",
+    "harga": 1100000,
+    "hargaFormatted": "Rp 1.100.000",
+    "berat": 600,
+    "makna": "Tumtuman memiliki tenunan benang emas/perak halus yang mewah, melambangkan keanggunan dan keindahan etnik modern.",
+    "penggunaan": "Dipakai sebagai sarung bawahan kebaya formal, pakaian resepsi modern, atau busana wisuda.",
+    "gambar": "assets/images/tumtuman.jpg",
+    "varian": [
+      { "warna": "Emas Kemewahan", "ukuran": "Standard (200x70cm)", "stok": 8 },
+      { "warna": "Perak Anggun", "ukuran": "Standard (200x70cm)", "stok": 5 }
+    ]
+  },
+  {
+    "id": 12,
+    "nama": "Ulos Harungguan",
+    "kategori": "Casual",
+    "harga": 1800000,
+    "hargaFormatted": "Rp 1.800.000",
+    "berat": 750,
+    "makna": "Harungguan memadukan bermacam-macam ragam motif ulos Batak dalam satu kain, melambangkan kekayaan ragam tradisi seni tenun.",
+    "penggunaan": "Ideal digunakan dalam peragaan busana etnik, pameran seni budaya, maupun koleksi selendang mewah.",
+    "gambar": "assets/images/harungguan.jpg",
+    "varian": [
+      { "warna": "Kombinasi Mahakarya", "ukuran": "Jumbo (230x80cm)", "stok": 4 }
+    ]
+  }
+]

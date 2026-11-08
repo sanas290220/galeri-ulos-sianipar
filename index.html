@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Ulos Sianipar - E-Commerce & Edukasi Budaya Batak</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FAF7F2',
+                            100: '#F4ECE1',
+                            200: '#E8D7C3',
+                            500: '#B87D4B',
+                            700: '#8C4A32',
+                            800: '#6B3322',
+                            900: '#3A190E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <div id="admin-mode-banner" class="hidden bg-amber-600 text-white text-xs py-1.5 px-4 text-center font-bold tracking-wide">
+        🛠️ DASHBOARD ADMIN GALERI — Anda masuk sebagai Admin Galeri Ulos Sianipar.
+    </div>
+
+    <div class="bg-brand-900 text-brand-50 text-xs py-2 px-4 text-center tracking-wide font-medium border-b border-brand-800">
+        ✨ Melestarikan Warisan Budaya Batak — Kain Ulos Authentik Galeri Sianipar Medan
+    </div>
+
+    <nav class="sticky top-0 z-40 glass-nav border-b border-brand-200/60 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-700 text-brand-50 flex items-center justify-center font-serif-title text-xl font-bold shadow-md">
+                        U
+                    </div>
+                    <div>
+                        <a href="index.html" class="font-serif-title text-xl sm:text-2xl font-bold text-brand-900 tracking-tight block">
+                            Galeri Ulos Sianipar
+                        </a>
+                        <span class="text-[10px] text-brand-700 font-semibold uppercase tracking-widest block -mt-1">
+                            Digital Cultural Heritage
+                        </span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8 text-xs font-semibold text-stone-700">
+                    <a href="index.html" class="text-brand-700 font-bold border-b-2 border-brand-700 pb-1">Beranda</a>
+                    <a href="#katalog-section" class="hover:text-brand-700 transition">Katalog Ulos</a>
+                    <a href="#edukasi-section" class="hover:text-brand-700 transition">Makna & Adat</a>
+                    <a href="#tentang-section" class="hover:text-brand-700 transition">Kontak & Lokasi</a>
+                </div>
+
+                <div class="flex items-center gap-3.5">
+                    <div class="hidden lg:block relative w-52">
+                        <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Cari motif ulos..." 
+                               class="w-full bg-white text-xs text-stone-800 placeholder-stone-400 pl-9 pr-4 py-2 rounded-full border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-500/40">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-2.5 text-stone-400 text-xs"></i>
+                    </div>
+
+                    <div class="auth-nav-container"></div>
+
+                    <a href="keranjang.html" title="Keranjang Belanja" class="relative p-2.5 text-stone-700 hover:text-brand-700 rounded-full hover:bg-brand-100/50 transition">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span id="cart-count" class="absolute top-1 right-1 bg-brand-700 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm">
+                            0
+                        </span>
+                    </a>
+
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-100 bg-brand-50 px-4 pt-3 pb-6 space-y-3">
+            <div class="relative w-full mb-3">
+                <input type="text" id="search-input-mobile" onkeyup="handleSearchMobile()" placeholder="Cari motif ulos..." 
+                       class="w-full bg-white text-xs text-stone-800 placeholder-stone-400 pl-9 pr-4 py-2.5 rounded-full border border-stone-200">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-stone-400 text-xs"></i>
+            </div>
+            <a href="index.html" class="block text-sm font-semibold text-brand-700 py-2">Beranda</a>
+            <a href="#katalog-section" onclick="toggleMobileMenu()" class="block text-sm text-stone-700 py-2">Katalog Ulos</a>
+            <a href="#edukasi-section" onclick="toggleMobileMenu()" class="block text-sm text-stone-700 py-2">Makna & Adat</a>
+            <a href="#tentang-section" onclick="toggleMobileMenu()" class="block text-sm text-stone-700 py-2">Kontak & Lokasi</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-16 md:py-24 bg-gradient-to-b from-brand-50 via-brand-100/30 to-brand-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-200/60 text-brand-800 text-xs font-semibold tracking-wide border border-brand-200">
+                        <i class="fa-solid fa-award text-brand-700"></i> Sentra Kerajinan & Tenun Medan
+                    </span>
+                    <h1 class="font-serif-title text-3xl sm:text-5xl lg:text-6xl font-bold text-brand-900 leading-tight">
+                        Keindahan Tenun & Filosofi Mendalam Kain Ulos Batak
+                    </h1>
+                    <p class="text-stone-600 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Temukan koleksi kain ulos bermutu tinggi dari Galeri Ulos Sianipar Medan. Dilengkapi panduan fungsi adat, makna simbolis motif, dan kemudahan pemesanan digital secara aman.
+                    </p>
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#katalog-section" class="w-full sm:w-auto px-8 py-3.5 bg-brand-700 hover:bg-brand-800 text-white font-medium text-sm rounded-full shadow-lg hover:shadow-xl transition text-center">
+                            Jelajahi Katalog Ulos
+                        </a>
+                        <a href="#edukasi-section" class="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-stone-50 text-stone-800 font-medium text-sm rounded-full border border-stone-200 shadow-sm transition text-center">
+                            Pelajari Makna Adat
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md bg-white p-4 rounded-3xl card-hover-effect border border-brand-100 shadow-xl shadow-brand-900/5">
+                        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-brand-100">
+                            <img src="assets/images/ragidup.jpg" alt="Ulos Ragidup" 
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80';"
+                                 class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-brand-800 text-[11px] font-bold px-3.5 py-1 rounded-full shadow-sm border border-white/50">
+                                Best Seller Adat
+                            </span>
+                        </div>
+                        <div class="pt-4 px-2 flex justify-between items-center">
+                            <div>
+                                <h4 class="font-serif-title font-bold text-stone-800">Koleksi Utama Adat Batak</h4>
+                                <p class="text-xs text-stone-500">Tenun ATBM Pengrajin Berpengalaman</p>
+                            </div>
+                            <span class="text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1.5 rounded-xl border border-brand-200">
+                                Premium Quality
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG SECTION -->
+    <section id="katalog-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <span class="text-xs font-bold text-brand-700 tracking-wider uppercase block mb-1">Koleksi Pilihan</span>
+                <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-900">Katalog Ulos & Peruntukan Adat</h2>
+            </div>
+            <p class="text-stone-500 text-xs sm:text-sm max-w-md">
+                Pilih jenis kain ulos sesuai dengan kebutuhan acara upacara adat, cinderamata, maupun busana formal Anda.
+            </p>
+        </div>
+
+        <div id="category-filters" class="flex items-center gap-2 overflow-x-auto pb-4 mb-8">
+            <button onclick="filterCategory('Semua')" class="filter-btn active-filter px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition bg-brand-700 text-white shadow-sm">
+                Semua Koleksi
+            </button>
+            <button onclick="filterCategory('Pernikahan')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition bg-white text-stone-600 border border-stone-200 hover:border-brand-500 hover:text-brand-700">
+                Pernikahan
+            </button>
+            <button onclick="filterCategory('Pesta')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition bg-white text-stone-600 border border-stone-200 hover:border-brand-500 hover:text-brand-700">
+                Pesta & Suka Cita
+            </button>
+            <button onclick="filterCategory('Duka Cita')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition bg-white text-stone-600 border border-stone-200 hover:border-brand-500 hover:text-brand-700">
+                Duka Cita
+            </button>
+            <button onclick="filterCategory('Casual')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition bg-white text-stone-600 border border-stone-200 hover:border-brand-500 hover:text-brand-700">
+                Casual / Souvenir
+            </button>
+        </div>
+
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+
+        <div id="empty-state" class="hidden py-16 text-center space-y-3">
+            <i class="fa-solid fa-box-open text-4xl text-stone-300"></i>
+            <h4 class="font-serif-title text-lg font-bold text-stone-700">Motif Ulos Tidak Ditemukan</h4>
+            <p class="text-xs text-stone-500">Coba ubah kata kunci pencarian atau pilih kategori filter yang lain.</p>
+        </div>
+    </section>
+
+    <!-- EDUKASI SECTION -->
+    <section id="edukasi-section" class="py-16 bg-brand-100/50 border-t border-b border-brand-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-brand-900 mb-2">Memahami Tata Cara & Makna Ulos</h2>
+            <p class="text-stone-600 text-xs sm:text-sm max-w-xl mx-auto mb-10">Setiap helaian benang kain ulos memiliki simbolisme doa dan aturan adat yang diwariskan secara turun-temurun.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm space-y-2">
+                    <span class="w-10 h-10 rounded-2xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold">1</span>
+                    <h3 class="font-serif-title text-base font-bold text-stone-800">Suhu & Kehangatan</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Fungsi mendasar Ulos adalah memberikan kehangatan fisik serta kehangatan jiwa melalui doa pemberkahan.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm space-y-2">
+                    <span class="w-10 h-10 rounded-2xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold">2</span>
+                    <h3 class="font-serif-title text-base font-bold text-stone-800">Aturan Mangulosi</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Penyerahan ulos dalam adat memiliki hierarki khusus dari pihak Hula-hula (kedudukan lebih tua) kepada keturunannya.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/80 shadow-sm space-y-2">
+                    <span class="w-10 h-10 rounded-2xl bg-brand-50 text-brand-700 flex items-center justify-center font-bold">3</span>
+                    <h3 class="font-serif-title text-base font-bold text-stone-800">Kesesuaian Acara</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Penggunaan ulos tidak boleh tertukar antara upacara pesta pernikahan dan upacara duka cita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER LENGKAP -->
+    <footer id="tentang-section" class="bg-brand-900 text-brand-100 py-14 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-brand-800">
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-brand-700 text-white flex items-center justify-center font-serif-title text-lg font-bold">U</div>
+                        <h3 class="font-serif-title text-xl font-bold text-white">Galeri Ulos Sianipar Medan</h3>
+                    </div>
+                    <p class="text-xs text-brand-200 leading-relaxed max-w-md">
+                        Pusat kerajinan dan perdagangan kain ulos tradisional Batak berkualitas tinggi di Kota Medan. Berkomitmen menjaga kelestarian warisan seni tenun nusantara dan mempermudah akses pembeli secara digital.
+                    </p>
+                </div>
+
+                <div class="space-y-2 text-xs">
+                    <h4 class="font-bold uppercase tracking-wider text-white text-xs mb-3">Kontak & Lokasi Galeri</h4>
+                    <p class="text-brand-200 flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot text-brand-500 mt-0.5"></i>
+                        <span>Jl. AR. Hakim No. 104, Medan, Sumatera Utara, Indonesia</span>
+                    </p>
+                    <p class="text-brand-200 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        <span>WhatsApp: +62 812-3456-7890</span>
+                    </p>
+                    <p class="text-brand-200 flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-brand-500"></i>
+                        <span>Senin - Sabtu: 08.00 - 18.00 WIB</span>
+                    </p>
+                </div>
+
+                <div class="space-y-2 text-xs">
+                    <h4 class="font-bold uppercase tracking-wider text-white text-xs mb-3">Pengembangan Prototype</h4>
+                    <p class="text-brand-200">Metode User-Centered Design (UCD)</p>
+                    <p class="text-brand-200">Pengujian Kebolehgunaan UI/UX</p>
+                    <p class="text-brand-200">Fakultas Sains Komputasi & Kecerdasan Digital</p>
+                </div>
+            </div>
+
+            <div class="pt-6 text-center md:flex md:justify-between items-center text-[11px] text-brand-200/70">
+                <p>&copy; 2026 Galeri Ulos Sianipar Medan. Prototype UI/UX Tugas Akhir.</p>
+                <p class="mt-2 md:mt-0">Dirancang dengan Pendekatan User-Centered Design (UCD)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL AUTHENTICATION -->
+    <div id="login-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 space-y-5 shadow-2xl border border-brand-100 relative">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 w-8 h-8 rounded-full flex items-center justify-center hover:bg-stone-100 transition">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+
+            <div class="text-center space-y-1">
+                <div class="w-12 h-12 rounded-full bg-brand-50 text-brand-700 mx-auto flex items-center justify-center text-xl font-bold font-serif-title shadow-sm">
+                    U
+                </div>
+                <h3 class="font-serif-title text-xl font-bold text-brand-900">Autentikasi Akun Galeri</h3>
+            </div>
+
+            <div class="flex border-b border-stone-200">
+                <button id="tab-login-btn" onclick="switchAuthTab('login')" class="w-1/2 py-2 text-xs font-bold text-brand-800 border-b-2 border-brand-700">
+                    Masuk (Login)
+                </button>
+                <button id="tab-register-btn" onclick="switchAuthTab('register')" class="w-1/2 py-2 text-xs font-semibold text-stone-400 border-b-2 border-transparent hover:text-stone-700">
+                    Daftar Akun Baru
+                </button>
+            </div>
+
+            <div id="login-modal-message" class="hidden text-xs bg-amber-50 text-amber-800 p-3 rounded-xl border border-amber-200"></div>
+
+            <form id="auth-login-form" onsubmit="handleLoginSubmit(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Username</label>
+                    <input type="text" id="login-username" required placeholder="Contoh: pembeli atau admin" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Password</label>
+                    <input type="password" id="login-password" required placeholder="••••••••" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none">
+                </div>
+
+                <div class="bg-stone-50 p-3 rounded-xl border border-stone-200/70 text-[11px] text-stone-500 space-y-1">
+                    <p class="font-bold text-stone-700">Akun Bawaan Prototype:</p>
+                    <p>• Admin Galeri: <code class="bg-stone-200 px-1 rounded text-stone-800">admin</code> / <code class="bg-stone-200 px-1 rounded text-stone-800">admin123</code></p>
+                    <p>• Pembeli Bawaan: <code class="bg-stone-200 px-1 rounded text-stone-800">pembeli</code> / <code class="bg-stone-200 px-1 rounded text-stone-800">pembeli123</code></p>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-brand-700 hover:bg-brand-800 text-white rounded-xl text-xs font-semibold shadow transition">
+                    Masuk Sekarang
+                </button>
+            </form>
+
+            <form id="auth-register-form" onsubmit="handleRegisterSubmit(event)" class="hidden space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Nama Lengkap</label>
+                    <input type="text" id="reg-name" required placeholder="Nama lengkap Anda" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Username Baru</label>
+                    <input type="text" id="reg-username" required placeholder="Username unik" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Password</label>
+                    <input type="password" id="reg-password" required placeholder="Buat password" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none">
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-brand-700 hover:bg-brand-800 text-white rounded-xl text-xs font-semibold shadow transition">
+                    Daftar Akun Pembeli
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
